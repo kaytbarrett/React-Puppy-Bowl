@@ -1,13 +1,14 @@
-import { useState } from 'react'
-import './App.css'
+import React from 'react';
+import './App.css';
+import Players from './Players';
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
-    <>
- 
-    </>
+    <div className="App">
+      <Players />
+    </div>
   )
 }
 
