@@ -10,6 +10,6 @@ function App() {
       <Players />
     </div>
   )
-}
+};
 
-export default App
+export default App;
