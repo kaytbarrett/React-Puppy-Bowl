@@ -26,8 +26,8 @@ const Players = () => {
 
                     <div className="player-details">
                         <h2> {player.name} </h2>
-                        <h2> {player.breed} </h2>
-                        <h2> {player.status} </h2>
+                        <h2 className="breed">Breed: {player.breed} </h2>
+                        <h2 className="status">Status: {player.status} </h2>
                     </div>
                 </div>
             ))}

@@ -50,8 +50,7 @@ background-color: aliceblue;
   width: 250px;
   height: 250px;
   object-fit: cover;
-  display:grid;
-  margin-left: 60px;
+  padding-top: 10px;
 }
 
 .player-details {
@@ -59,6 +58,14 @@ background-color: aliceblue;
   align-items: center;
   justify-content: center;
   color: #000;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
+}
+
+h2 {
+  margin: 10px;
+}
+
+.breed, .status {
+  font-size: 16px;
 }
