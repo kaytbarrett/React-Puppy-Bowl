@@ -22,7 +22,7 @@ const Players = () => {
 
             {data.data.players.map((player) => (
                 <div key={player.id} className="player-card">
-                    <img src={player.imageUrl} alt={player.name} />
+                    <img className="player-image" src={player.imageUrl} alt={player.name} />
 
                     <div className="player-details">
                         <h2> {player.name} </h2>
