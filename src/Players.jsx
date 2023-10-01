@@ -1,5 +1,14 @@
 import React from 'react';
+import Button from '@mui/material/Button';
 import { useFetchPlayersQuery } from './puppyBowlApi';
+import SinglePlayer from './SinglePlayer';
+
+
+    const handleClick = () => {
+      {<SinglePlayer />}};
+
+
+
 
 const Players = () => {
     const { data = {}, error, isLoading } = useFetchPlayersQuery();
@@ -29,6 +38,7 @@ const Players = () => {
                         <h2 className="breed">Breed: {player.breed} </h2>
                         <h2 className="status">Status: {player.status} </h2>
                     </div>
+                    <Button color="secondary" onClick={() => {handleClick}}>See Details</Button>
                 </div>
             ))}
         </div>
