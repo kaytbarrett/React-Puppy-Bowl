@@ -10,9 +10,12 @@ const puppyBowlApi = createApi({
     fetchPlayers: builder.query({
       query: () => `players`,
     }),
+    fetchSinglePlayer: builder.query({
+      query: () => `players/${player.id}`
+    }),
   }),
 });
 
-export const { useFetchPlayersQuery } = puppyBowlApi;
+export const { useFetchPlayersQuery, useFetchSinglePlayerQuery } = puppyBowlApi;
 
 export default puppyBowlApi;
