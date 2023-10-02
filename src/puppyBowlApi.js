@@ -11,7 +11,7 @@ const puppyBowlApi = createApi({
       query: () => `players`,
     }),
     fetchSinglePlayer: builder.query({
-      query: () => `players/${player.id}`
+      query: (playerId) => `players/${playerId}`
     }),
   }),
 });

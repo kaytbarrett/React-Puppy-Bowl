@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Players from './Players';
+import SinglePlayer from './SinglePlayer';
+import { Routes, Route } from "react-router-dom";
+
 
 function App() {
 
 
   return (
-    <div className="App">
-      <Players />
-    </div>
+    <Routes>
+         <Route path="/" element={<Players />} />
+      <Route path="/player/:id" element={<SinglePlayer />} />
+    </Routes>
+
   )
 };
 
