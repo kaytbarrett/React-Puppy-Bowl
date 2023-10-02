@@ -69,3 +69,51 @@ h2 {
 .breed, .status {
   font-size: 16px;
 }
+
+.single-player {
+  display: flex;
+  justify-content: center;
+}
+
+.single-card {
+  width: 450px;
+  height: 500px;
+  margin: 10px;
+  background-color: rgba(125, 153, 221, 0.801);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.single-card:hover {
+  transform: translateY(-5px);
+}
+
+.single-image {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  padding-top: 15px;
+}
+
+.single-details {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  color: #000;
+  text-align: center;
+  padding-left: 80px;
+}
+
+.h1 {
+  margin: 5px;
+}
+
+.single-details h3 {
+  margin: 3px;
+}

@@ -35,7 +35,7 @@ const Players = () => {
                         <h2 className="status">Status: {player.status} </h2>
                     </div>
                     <Link to={`/player/${player.id}`}>
-                        <Button key={player.id} > See Details
+                        <Button color="secondary" key={player.id} > See Details
                         </Button>
                     </Link>
                 </div>

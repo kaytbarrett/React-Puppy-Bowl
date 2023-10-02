@@ -19,13 +19,16 @@ const SinglePlayer = () => {
 
     return (
         <div className="single-player">
-            <div key={data.data.player.id} className="player-card">
-                <img className="player-image" src={data.data.player.imageUrl} alt={data.data.player.name} />
+            <div key={data.data.player.id} className="single-card">
+                <img className="single-image" src={data.data.player.imageUrl} alt={data.data.player.name} />
 
-                <div className="player-details">
-                    <h2> {data.data.player.name} </h2>
-                    <h2 className="breed">Breed: {data.data.player.breed} </h2>
-                    <h2 className="status">Status: {data.data.player.status} </h2>
+                   <h1 className="h1"> {data.data.player.name} </h1>
+                   
+                   <div className="single-details">
+                    <h3>Id: {data.data.player.id}</h3>
+                    <h3>Breed: {data.data.player.breed} </h3>
+                    <h3>Status: {data.data.player.status} </h3>
+                    <h3>Team Name: {data.data.player.team.name}</h3>
                 </div>
                 <BackButton />
             </div>
