@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Players from './Players';
 import SinglePlayer from './SinglePlayer';
-import { Routes, Route, useParams, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 
 function App() {
