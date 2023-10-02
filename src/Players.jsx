@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useFetchPlayersQuery } from './puppyBowlApi';
 import Button from '@mui/material/Button';
 import { Link } from "react-router-dom";
@@ -7,7 +7,12 @@ import { Link } from "react-router-dom";
 
 const Players = () => {
     const { data = {}, error, isLoading } = useFetchPlayersQuery();
+    const [selectedPlayerId, setSelectedPlayerId] = useState(null);
 
+
+    const handleClick = (playerId) => {
+        setSelectedPlayerId(playerId);
+    }
 
     if (isLoading) {
         return <div>Loading...</div>
@@ -34,15 +39,16 @@ const Players = () => {
                         <h2 className="breed">Breed: {player.breed} </h2>
                         <h2 className="status">Status: {player.status} </h2>
                     </div>
-                    <Link to={`/player/${player.name}`}>
-                   <Button key={player.id} > See Details
-                   </Button>
-                   </Link>
+                    <Link to={`/player/${player.id}`} onClick={() => handleClick(player.id)}>
+                        <Button key={player.id} > See Details
+                        </Button>
+                    </Link>
                 </div>
             ))}
         </div>
     );
 };
+
 
 
 export default Players;

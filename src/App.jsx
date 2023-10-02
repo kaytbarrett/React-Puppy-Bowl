@@ -6,13 +6,12 @@ import { Routes, Route, useParams, Link } from "react-router-dom";
 
 
 function App() {
-  const [selectedPlayerId, setSelectedPlayerId] = useState(null);
 
 
   return (
     <Routes>
-         <Route path="/" element={<Players setSelectedPlayerId={setSelectedPlayerId}/>} />
-      <Route path="/player/:name" element={<SinglePlayer playerId={selectedPlayerId}/>} />
+         <Route path="/" element={<Players />} />
+      <Route path="/player/:id" element={<SinglePlayer />} />
     </Routes>
 
   )
