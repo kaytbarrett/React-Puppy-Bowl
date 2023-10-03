@@ -2,7 +2,7 @@ import React from 'react';
 import { useFetchSinglePlayerQuery } from './puppyBowlApi';
 import BackButton from './BackButton';
 import { useParams } from 'react-router-dom';
-
+import RemovePlayer from './DeleteButton';
 
 
 const SinglePlayer = () => {
@@ -29,7 +29,7 @@ const SinglePlayer = () => {
                     <h3>Breed: {data.data.player.breed} </h3>
                     <h3>Status: {data.data.player.status} </h3>
                 </div>
-                <BackButton />
+                <BackButton /><RemovePlayer />
             </div>
         </div>
     );

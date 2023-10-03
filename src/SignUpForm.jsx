@@ -7,6 +7,7 @@ function SignUpForm() {
     const [image, setImage] = useState("");
     const [error, setError] = useState(null);
 
+
     async function handleSubmit(event) {
         event.preventDefault();
 
@@ -30,7 +31,12 @@ function SignUpForm() {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
-    
+
+            setPupName("");
+            setId("");
+            setBreed("");
+            setImage("");
+
 
             const result = await response.json();
             console.log(result);
