@@ -41,6 +41,8 @@ function SignUpForm() {
             const result = await response.json();
             console.log(result);
 
+            window.location.reload();
+
         } catch (error) {
             setError(error.message);
             console.error('Error:', error);
