@@ -13,12 +13,10 @@ function SignUpForm() {
         try {
             const URL = 'https://fsa-puppy-bowl.herokuapp.com/api/2306-GHP-ET-WEB-PT-SF/players'
             const data = {
-                player:  {
                     id: id,
                     name: pupName,
                     breed: breed,
-                    imageUrl: imageUrl,
-                }
+                    imageUrl: image,
             };
 
             const response = await fetch(URL, {
@@ -29,11 +27,17 @@ function SignUpForm() {
                 body: JSON.stringify(data),
             });
 
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+    
+
             const result = await response.json();
             console.log(result);
 
         } catch (error) {
             setError(error.message);
+            console.error('Error:', error);
         }
 
     }
