@@ -1,11 +1,12 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Button from '@mui/material/Button';
 
 function RemovePlayer() {
 
     const { id } = useParams();
+    const navigate = useNavigate();
     const [error, setError] = useState(null);
 
     async function DeletePlayer(event) {
@@ -25,6 +26,10 @@ function RemovePlayer() {
 
             const result = await response.json();
             console.log('Removed: ', result);
+
+            navigate('/');
+
+            window.location.reload();
 
         } catch (error) {
             setError(error.message);
