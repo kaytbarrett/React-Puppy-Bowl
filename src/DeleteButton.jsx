@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
-
+import Button from '@mui/material/Button';
 
 function RemovePlayer() {
 
@@ -35,7 +35,7 @@ function RemovePlayer() {
 
     return (
         <>
-                <button id="button"  onClick={DeletePlayer}>Remove Player</button>
+               <Button color="secondary" onClick={DeletePlayer}>Remove Player</Button>
         </>
     )
 };

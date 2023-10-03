@@ -1,4 +1,4 @@
-
+import Button from '@mui/material/Button';
 import React from 'react';
 
 const BackButton = () => {
@@ -7,9 +7,9 @@ const BackButton = () => {
   };
 
   return (
-    <button onClick={goBack}>
+    <Button color="secondary" onClick={goBack}>
       Back
-    </button>
+    </Button>
   );
 };
 

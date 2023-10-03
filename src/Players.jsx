@@ -6,6 +6,7 @@ import SignUpForm from './SignUpForm';
 
 
 
+
 const Players = () => {
     const { data = {}, error, isLoading } = useFetchPlayersQuery();
 
@@ -42,7 +43,6 @@ const Players = () => {
                             <Button color="secondary" key={player.id} > See Details
                             </Button>
                         </Link>
-
                     </div>
 
                 ))}

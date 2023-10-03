@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import RemovePlayer from './DeleteButton';
 
 
+
 const SinglePlayer = () => {
     const { id } = useParams();
     const { data, error, isLoading } = useFetchSinglePlayerQuery(id);
@@ -29,7 +30,7 @@ const SinglePlayer = () => {
                     <h3>Breed: {data.data.player.breed} </h3>
                     <h3>Status: {data.data.player.status} </h3>
                 </div>
-                <BackButton /><RemovePlayer />
+                <BackButton /> <RemovePlayer />
             </div>
         </div>
     );
