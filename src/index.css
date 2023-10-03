@@ -7,7 +7,7 @@ background-color: aliceblue;
   text-align: center;
   color: #610564;
   font-size: 24px;
-  padding: 24px;
+  padding: 0px;
     margin-left: 21px;
     padding-right: 100px;
     padding-left: 100px;
@@ -116,4 +116,8 @@ h2 {
 
 .single-details h3 {
   margin: 3px;
+}
+
+.form {
+  padding-bottom: 20px;
 }
