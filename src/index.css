@@ -120,4 +120,11 @@ h2 {
 
 .form {
   padding-bottom: 20px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.searchbar {
+  display: flex;
+  justify-content: center;
 }

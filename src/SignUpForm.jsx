@@ -2,7 +2,6 @@ import { useState } from 'react'
 
 function SignUpForm() {
     const [breed, setBreed] = useState("");
-    const [id, setId] = useState("");
     const [pupName, setPupName] = useState("");
     const [image, setImage] = useState("");
     const [error, setError] = useState(null);
@@ -14,7 +13,6 @@ function SignUpForm() {
         try {
             const URL = 'https://fsa-puppy-bowl.herokuapp.com/api/2306-GHP-ET-WEB-PT-SF/players'
             const data = {
-                    id: id,
                     name: pupName,
                     breed: breed,
                     imageUrl: image,
@@ -33,7 +31,6 @@ function SignUpForm() {
             }
 
             setPupName("");
-            setId("");
             setBreed("");
             setImage("");
 
@@ -63,12 +60,6 @@ function SignUpForm() {
                             const value = e.target.value
                             setPupName(value);
                         }} />
-                </label>
-                <label>
-                    Id: {" "}<input
-                        value={id}
-                        onChange={(e) =>
-                            setId(e.target.value)} />
                 </label>
                 <label>
                     Breed: {" "}<input
